@@ -7,5 +7,8 @@
         "**/templates/**/*": "django-txt",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements"
     },
-    "emmet.includeLanguages": {"django-html": "html"}
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }
