@@ -3,6 +3,8 @@ from django.urls import reverse
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.text import slugify
 # Create your models here.
+
+
 class Book(models.Model):
     title = models.CharField(max_length=200, unique=True)
     rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
