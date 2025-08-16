@@ -4,7 +4,7 @@ from django.db.models import Avg
 
 
 # Create your views here.
-ç
+
 def index(request):
     books = Book.objects.all().order_by("title")
     num_book = books.count()
@@ -17,10 +17,6 @@ def index(request):
         })
 
 def book_detail(request, slug):
-    # try:
-    #     book = Book.objects.get(pk=id)
-    # except:
-    #     raise Http404()
     book = get_object_or_404(Book, slug=slug)
     return render(request, "book_outlet/book_detail.html", {
         "title": book.title,
